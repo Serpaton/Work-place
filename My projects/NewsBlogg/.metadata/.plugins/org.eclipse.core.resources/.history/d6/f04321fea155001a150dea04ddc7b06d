@@ -1,0 +1,84 @@
+package com.example.NewsBlogg.controller;
+
+import java.io.BufferedReader;
+import java.io.ByteArrayInputStream;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.net.URI;
+import java.net.URISyntaxException;
+import java.net.URLDecoder;
+import java.net.URLEncoder;
+import java.net.http.HttpClient;
+import java.net.http.HttpRequest;
+import java.net.http.HttpResponse;
+import java.net.http.HttpResponse.BodyHandlers;
+import java.nio.charset.Charset;
+import java.nio.charset.StandardCharsets;
+import java.util.zip.GZIPInputStream;
+
+import org.springframework.http.client.HttpComponentsClientHttpRequestFactory;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.client.RestTemplate;
+
+import com.example.NewsBlogg.model.Chiff;
+import com.example.NewsBlogg.model.Meduza;
+import com.fasterxml.jackson.databind.ObjectMapper;
+
+@RestController
+@RequestMapping("/chiff")
+
+public class NewsController {
+	
+	
+	@GetMapping("/info")
+	private Chiff getAndParseChiff() throws  IOException, InterruptedException, URISyntaxException {
+
+		
+		
+		var httpClient = HttpClient.newHttpClient();
+		var httpRequest = HttpRequest.newBuilder()
+				
+	
+	
+		.GET()
+		.uri(new URI("https://meduza.io/api/v3/shapito/2015/06/02/vyshel-neofitsialnyy-terminalnyy-klient-meduzy"))
+		.build();
+	
+		
+		
+		var httpResponse = httpClient.send(httpRequest, HttpResponse.BodyHandlers.ofByteArray());
+	
+		try (var gzip = new GZIPInputStream(new ByteArrayInputStream(httpResponse.body()));
+	             var reader = new InputStreamReader(gzip);
+	             var in = new BufferedReader(reader);
+	        ) {
+	            
+	            StringBuilder content = new StringBuilder();
+	            String line;
+	            while ((line = in.readLine()) != null) {
+	                content.append(line);
+	            }
+	          
+	            String result = content.toString();
+	        }
+	        catch (IOException  ex) {
+	        	System.out.println("Error");
+	        	
+	        	}
+		
+	
+		
+		
+	
+		
+		var objectMapper = new ObjectMapper();
+		var chiff = objectMapper.readValue(httpResponse.body(), Chiff.class);
+	  
+		return chiff;
+		
+	}
+
+	
+}

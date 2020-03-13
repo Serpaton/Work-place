@@ -1,0 +1,24 @@
+package com.example.NewsBlogg.model;
+
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@NoArgsConstructor
+
+public class Source {
+	
+	 private String trust;
+
+	    private String quote;
+
+	    private String name;
+
+	    private String url;
+
+	 
+	
+	}
+		
+
+

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Registration</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
+    <link rel="stylesheet" th:href="@{/css/main.css}"/>
+</head>
+
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<a class="nav-link" href="first"><img src="https://image.flaticon.com/icons/svg/25/25680.svg" width="20" height="20" alt=""> <button type="button" class="btn btn-info">Home</button><span class="sr-only">(current)</span></a>
+   
+</nav>
+<font color="#008080" size="+2"><div><center>Registration</center></div></a></font>
+ 
+
+<table cellpadding="0" cellspacing="0" width="100%" height="100%">
+  <tr>
+    <td align="center">
+      <table cellpadding="30" cellspacing="4" border="1">
+        <tr>
+          <td>
+<main role="main" class="container">
+
+<form action="action_page.php">
+<div class="container">
+<font color="#008080"><p><center>Please fill in this form to create an account</center></p></font>
+<hr>
+
+
+<input type="text" placeholder="Enter login" name="email" required>
+
+
+<input type="password" placeholder="Enter Password" name="psw" required>
+
+
+<input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+
+<button type="submit" class="registerbtn"><font color="#008080">Register</font></button>
+<hr>
+
+<p><font color="#008080"><center>By creating an account you agree to our </center><a href="#"></font><font color="#000000"><center>Terms & Privacy</center></font></a>.</p>
+</div>
+
+<div class="container signin">
+<p><font color="#008080"><center>Already have an account? </center><a href="login"></font><font color="#000000"><center>Sign in</center></font></a>.</p>
+</div>
+</form>
+
+
+
+    <div class="starter-template">
+        <form th:action="@{/registration}" th:object="${request}" method="post">
+        	<input type="text" name="name" th:field="*{name}"/>
+        	<input type="text" name="login" th:field="*{login}"/>
+        	<input type="password" name="password" th:field="*{password}"/>
+        	
+        </form>
+        
+    </div>
+
+</main>
+
+<!-- /.container -->
+
+<script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>

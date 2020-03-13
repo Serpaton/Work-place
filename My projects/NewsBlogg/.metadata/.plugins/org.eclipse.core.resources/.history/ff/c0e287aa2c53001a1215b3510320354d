@@ -1,0 +1,287 @@
+package com.example.NewsBlogg.model;
+
+
+private Image image;
+
+private String with_banners;
+
+private Footer footer;
+
+private String share_image;
+
+private String description;
+
+private Source source;
+
+private String title;
+
+private String version;
+
+private Content content;
+
+private String url;
+
+private Prefs prefs;
+
+private String pub_date;
+
+private String full_width;
+
+private null share_title;
+
+private String second_title;
+
+private Tag tag;
+
+private String pushed;
+
+private String modified_at;
+
+private String published_at;
+
+private Gallery[] gallery;
+
+private String[] authors;
+
+private String document_type;
+
+private String full;
+
+public Image getImage ()
+{
+    return image;
+}
+
+public void setImage (Image image)
+{
+    this.image = image;
+}
+
+public String getWith_banners ()
+{
+    return with_banners;
+}
+
+public void setWith_banners (String with_banners)
+{
+    this.with_banners = with_banners;
+}
+
+public Footer getFooter ()
+{
+    return footer;
+}
+
+public void setFooter (Footer footer)
+{
+    this.footer = footer;
+}
+
+public String getShare_image ()
+{
+    return share_image;
+}
+
+public void setShare_image (String share_image)
+{
+    this.share_image = share_image;
+}
+
+public String getDescription ()
+{
+    return description;
+}
+
+public void setDescription (String description)
+{
+    this.description = description;
+}
+
+public Source getSource ()
+{
+    return source;
+}
+
+public void setSource (Source source)
+{
+    this.source = source;
+}
+
+public String getTitle ()
+{
+    return title;
+}
+
+public void setTitle (String title)
+{
+    this.title = title;
+}
+
+public String getVersion ()
+{
+    return version;
+}
+
+public void setVersion (String version)
+{
+    this.version = version;
+}
+
+public Content getContent ()
+{
+    return content;
+}
+
+public void setContent (Content content)
+{
+    this.content = content;
+}
+
+public String getUrl ()
+{
+    return url;
+}
+
+public void setUrl (String url)
+{
+    this.url = url;
+}
+
+public Prefs getPrefs ()
+{
+    return prefs;
+}
+
+public void setPrefs (Prefs prefs)
+{
+    this.prefs = prefs;
+}
+
+public String getPub_date ()
+{
+    return pub_date;
+}
+
+public void setPub_date (String pub_date)
+{
+    this.pub_date = pub_date;
+}
+
+public String getFull_width ()
+{
+    return full_width;
+}
+
+public void setFull_width (String full_width)
+{
+    this.full_width = full_width;
+}
+
+public null getShare_title ()
+{
+    return share_title;
+}
+
+public void setShare_title (null share_title)
+{
+    this.share_title = share_title;
+}
+
+public String getSecond_title ()
+{
+    return second_title;
+}
+
+public void setSecond_title (String second_title)
+{
+    this.second_title = second_title;
+}
+
+public Tag getTag ()
+{
+    return tag;
+}
+
+public void setTag (Tag tag)
+{
+    this.tag = tag;
+}
+
+public String getPushed ()
+{
+    return pushed;
+}
+
+public void setPushed (String pushed)
+{
+    this.pushed = pushed;
+}
+
+public String getModified_at ()
+{
+    return modified_at;
+}
+
+public void setModified_at (String modified_at)
+{
+    this.modified_at = modified_at;
+}
+
+public String getPublished_at ()
+{
+    return published_at;
+}
+
+public void setPublished_at (String published_at)
+{
+    this.published_at = published_at;
+}
+
+public Gallery[] getGallery ()
+{
+    return gallery;
+}
+
+public void setGallery (Gallery[] gallery)
+{
+    this.gallery = gallery;
+}
+
+public String[] getAuthors ()
+{
+    return authors;
+}
+
+public void setAuthors (String[] authors)
+{
+    this.authors = authors;
+}
+
+public String getDocument_type ()
+{
+    return document_type;
+}
+
+public void setDocument_type (String document_type)
+{
+    this.document_type = document_type;
+}
+
+public String getFull ()
+{
+    return full;
+}
+
+public void setFull (String full)
+{
+    this.full = full;
+}
+
+@Override
+public String toString()
+{
+    return "ClassPojo [image = "+image+", with_banners = "+with_banners+", footer = "+footer+", share_image = "+share_image+", description = "+description+", source = "+source+", title = "+title+", version = "+version+", content = "+content+", url = "+url+", prefs = "+prefs+", pub_date = "+pub_date+", full_width = "+full_width+", share_title = "+share_title+", second_title = "+second_title+", tag = "+tag+", pushed = "+pushed+", modified_at = "+modified_at+", published_at = "+published_at+", gallery = "+gallery+", authors = "+authors+", document_type = "+document_type+", full = "+full+"]";
+}
+	
+	
+}

@@ -1,0 +1,37 @@
+package com.example.NewsBlogg.model;
+
+
+
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@NoArgsConstructor
+public class Meduza {
+
+	private String title;
+	private String second_title;
+	private String[] authors;
+	private String document_type;
+	private Source source;
+	private String pushed;
+	private Image image;
+	private String share_image;
+//	private null share_title;
+	private Content content;
+	private String with_banners;
+	private String full_width;
+	private String description;
+	private Prefs prefs;
+	private String version;
+	private String url;
+	private String modified_at;
+	private String published_at;
+	private String pub_date;
+	private Tag tag;
+	private Footer footer;
+	private Gallery[] gallery;
+	private String full;
+	
+	
+}

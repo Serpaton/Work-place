@@ -1,0 +1,9 @@
+package com.example.NewsBlogg.controller;
+
+public class Chiff extends Exception {
+
+	public Chiff (String message) {
+		super(message);
+	}
+	
+}

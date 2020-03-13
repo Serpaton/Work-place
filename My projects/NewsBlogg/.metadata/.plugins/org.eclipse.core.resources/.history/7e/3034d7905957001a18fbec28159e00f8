@@ -1,0 +1,79 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8">
+<meta name="viewport"
+  content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<title>WelcomeFriends</title>
+
+<link rel="stylesheet"
+  href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+<link rel="stylesheet" th:href="@{/css/main.css}" />
+</head>
+
+<body>
+
+    
+ 
+ 
+  
+ <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+   
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="registration"><img src="https://image.flaticon.com/icons/svg/25/25634.svg" width="20" height="20" alt=""> <button type="button" class="btn btn-info">Registration</button></a>
+      </li>
+      <li class="nav-item dropdown">
+     
+
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="login"><img src="https://image.flaticon.com/icons/svg/25/25702.svg" width="20" height="20" alt=""> <button type="button" class="btn btn-info">Login/Password</button></a>
+      </li>
+    </ul>
+    
+ 
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button type="button" class="btn btn-info">Search</button>
+    </form>
+  </div>
+</nav>
+  
+  <main role="main" class="container">
+
+
+<table class="table" >
+   <thead>
+    <tr>
+    <th scope="row"><font color="#008080">NEWS</font><th>
+   
+      </tr>
+    </thead>
+     <tr>
+      <tr th:each="b : ${first}">
+        <td scope="col" th:text="${b.title}">1<td>
+       
+          </tr>
+       <tfoot>
+      
+          </tfoot>
+</table>
+
+
+
+ </main>
+<script type="text/javascript"
+src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>

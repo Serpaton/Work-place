@@ -1,0 +1,8 @@
+INDEX VERSION 1.4+C:\Users\user_asus\Desktop\NewsBlogg\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+2208444196.index
+3808637871.index
+1132378226.index
+3016281055.index
+1774512266.index
+796526423.index
+2966220425.index

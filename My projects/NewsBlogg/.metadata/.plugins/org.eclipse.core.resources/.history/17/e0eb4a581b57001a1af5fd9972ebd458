@@ -1,0 +1,62 @@
+package com.example.NewsBlogg.controller;
+
+import java.io.BufferedReader;
+import java.io.ByteArrayInputStream;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.net.URI;
+import java.net.URISyntaxException;
+import java.net.URLDecoder;
+import java.net.URLEncoder;
+import java.net.http.HttpClient;
+import java.net.http.HttpRequest;
+import java.net.http.HttpResponse;
+import java.net.http.HttpResponse.BodyHandlers;
+import java.nio.charset.Charset;
+import java.nio.charset.StandardCharsets;
+
+import org.springframework.http.client.HttpComponentsClientHttpRequestFactory;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.client.RestTemplate;
+
+import com.example.NewsBlogg.model.Articles;
+import com.example.NewsBlogg.model.Chiff;
+
+import com.fasterxml.jackson.databind.ObjectMapper;
+
+@RestController
+@RequestMapping("/chiff")
+
+public class NewsController {
+	
+	
+	@GetMapping("/info")
+	private Articles getAndParseChiff()  throws  IOException, InterruptedException, URISyntaxException{
+
+		
+		
+		var httpClient = HttpClient.newHttpClient();
+		var httpRequest = HttpRequest.newBuilder()
+				
+	
+	
+		.GET()
+		.uri(new URI("http://newsapi.org/v2/top-headlines?country=ru&apiKey=bb3713121d6847c3b30abd3ab2bf5459"))
+		.build();
+	
+		
+		
+		var httpResponse = httpClient.send(httpRequest, BodyHandlers.ofString());
+	
+	
+		var objectMapper = new ObjectMapper();
+		var chiff = objectMapper.readValue(httpResponse.body(), Articles.class);
+	  
+		return chiff;
+		
+	}
+
+	
+}

@@ -1,0 +1,30 @@
+package com.example.NewsBlogg.controller;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+
+import com.example.NewsBlogg.model.Chiff;
+
+//import com.sun.tools.javac.util.List;
+
+@Controller
+public class ViewNewsController {
+	
+	@GetMapping("/news")
+	private String newsPage(Model model) {
+	List<Chiff> chiffs = new ArrayList<>();
+	chiffs.add(new Chiff());
+	chiffs.add(new Chiff());
+	chiffs.add(new Chiff());
+	
+	model.addAttribute("chiff", chiffs);
+		
+		return "news";
+	}
+	
+
+}

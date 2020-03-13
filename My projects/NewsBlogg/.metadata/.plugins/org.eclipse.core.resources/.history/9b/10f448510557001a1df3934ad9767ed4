@@ -1,0 +1,37 @@
+package com.example.NewsBlogg.model;
+
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@NoArgsConstructor
+
+public class Image {
+	
+	 private String original_width;
+
+	    private String wh_405_270_url;
+
+	    private String wh_300_200_url;
+
+	    private String small_url;
+
+	    private String display;
+
+	    private String wh_615_410_url;
+
+	    private String caption;
+
+	    private String original_height;
+
+	    private String wh_1245_500_url;
+
+	    private String credit;
+
+	    private String wh_165_110_url;
+
+	    private String large_url;
+    
+   
+
+}

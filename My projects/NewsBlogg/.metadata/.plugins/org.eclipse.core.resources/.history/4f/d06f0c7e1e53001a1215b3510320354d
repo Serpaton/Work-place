@@ -1,0 +1,8 @@
+package com.example.NewsBlogg.model;
+
+public class Chiff {
+	
+	public Meduza meduza;
+	private String documents;
+
+}

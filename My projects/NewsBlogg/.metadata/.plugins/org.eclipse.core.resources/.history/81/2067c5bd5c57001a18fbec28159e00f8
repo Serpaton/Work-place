@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Login</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
+    <link rel="stylesheet" th:href="@{/css/main.css}"/>
+</head>
+
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<a class="nav-link" href="first"><img src="https://image.flaticon.com/icons/svg/25/25680.svg" width="20" height="20" alt=""> <button type="button" class="btn btn-info">Home</button><span class="sr-only">(current)</span></a>
+   
+</nav>
+
+<font color="#008080" size="+2"><div><center>Create your news!</center></div></a></font>
+
+<table cellpadding="0" cellspacing="0" width="100%" height="100%">
+  <tr>
+    <td align="center">
+      <table cellpadding="30" cellspacing="4" border="1">
+        <tr>
+          <td>
+
+<main role="main" class="container">
+
+    <div class="starter-template">
+    <font color="#008080"><p><center>Please write your news</center></p></font>
+    <hr>
+        <form th:action="@{/{login}/createNews(login=${request.login}, password=${request.password})}" th:object="${request}" method="post">
+        	<input type="text" name="title" th:field="*{title}"/>
+        	<input type="text" name="content" th:field="*{content}"/>
+        	 <button type="submit" class="registerbtn"><font color="#008080">Enter</font></button>
+        	 <hr>
+        </form>
+        
+    </div>
+
+</main>
+
+<!-- /.container -->
+
+<script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>

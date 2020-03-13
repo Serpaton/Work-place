@@ -1,0 +1,15 @@
+package com.example.NewsBlogg.model;
+
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@NoArgsConstructor
+
+public class Inner {
+	
+	 private String layout;
+
+	    private Elements elements;
+	
+}

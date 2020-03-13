@@ -1,0 +1,15 @@
+package com.example.NewsBlogg.model;
+
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@NoArgsConstructor
+
+public class Elementness {
+	
+	 private Image image;
+
+	    private Tag tag;
+
+}

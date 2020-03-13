@@ -1,0 +1,19 @@
+package com.example.NewsBlogg.model;
+
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@NoArgsConstructor
+
+public class Elements {
+
+	private Image image;
+
+    private Ads ads;
+
+    private Reactions reactions;
+
+    private Tag tag;
+	
+}

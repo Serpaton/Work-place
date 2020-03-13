@@ -1,0 +1,29 @@
+package com.example.NewsBlogg.model;
+
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@NoArgsConstructor
+
+public class Gallery {
+
+	 private String small_url;
+
+	    private String large_width;
+
+	    private String original_url;
+
+	    private String caption;
+
+	    private String id;
+
+	    private String text;
+
+	    private String credit;
+
+	    private String large_url;
+
+	    private String large_height;
+	
+}

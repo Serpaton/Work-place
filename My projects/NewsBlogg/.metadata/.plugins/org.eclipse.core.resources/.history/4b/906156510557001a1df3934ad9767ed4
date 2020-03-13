@@ -1,0 +1,15 @@
+package com.example.NewsBlogg.model;
+
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@NoArgsConstructor
+
+public class Content {
+	
+	 private String layout_url;
+
+	    private String body;
+
+}

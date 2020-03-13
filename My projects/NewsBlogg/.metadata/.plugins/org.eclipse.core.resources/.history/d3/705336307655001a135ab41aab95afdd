@@ -1,0 +1,21 @@
+package com.example.NewsBlogg.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+
+import com.sun.tools.javac.util.List;
+
+@Controller
+public class ViewNewsController {
+	
+	@GetMapping("/news")
+	private String newsPage(Model model) {
+	List<Meduza> 
+		model.addAtribute("")
+		
+		return "news";
+	}
+	
+
+}

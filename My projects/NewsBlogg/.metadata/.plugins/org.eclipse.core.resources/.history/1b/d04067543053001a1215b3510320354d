@@ -1,0 +1,5 @@
+package com.example.NewsBlogg.model;
+
+public class Content {
+
+}

@@ -1,0 +1,28 @@
+package com.example.NewsBlogg.model;
+
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@NoArgsConstructor
+
+public class SourceMeduza {
+	
+	 private String trust;
+
+	    private String quote;
+
+	    private String name;
+
+	    private String url;
+
+	 
+	    @Override
+	    public String toString()
+	    {
+	        return "ClassPojo [trust = "+trust+", quote = "+quote+", name = "+name+", url = "+url+"]";
+	    }
+	}
+		
+
+
