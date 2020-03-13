@@ -1,0 +1,1 @@
+INDEX VERSION 1.131+C:\Users\user_asus\Desktop\COURSEJAVA\ThreadApplication\.metadata\.plugins\org.eclipse.jdt.core
